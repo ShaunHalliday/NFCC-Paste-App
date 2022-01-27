@@ -1,43 +1,42 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import {BrowserRouter, Route, Routes, Link} from 'react-router-dom';
-import {Stack} from '@twilio-paste/core/stack';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {IndexPage} from './pages/IndexPage';
-import {Loading} from './components/Loading';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { IndexPage } from "./pages/IndexPage";
+import { Loading } from "./components/Loading";
+import { Header } from "./components/Header/Header";
+import { SideNav } from "./components/Sidenav/Sidenav";
+import { Box } from "@twilio-paste/core";
+import Routing from "./pages/Routing";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-const Page1 = React.lazy(async () => import('./pages/Page1'));
+// const Page1 = React.lazy(async () => import("./pages/Page1"));
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-const Page2 = React.lazy(async () => import('./pages/Page2'));
+// const Page2 = React.lazy(async () => import("./pages/Page2"));
 
 export const Index: React.FC = () => {
   return (
-    <App>
-      <React.Suspense fallback={<Loading />}>
-        <BrowserRouter>
-          <Stack orientation="horizontal" spacing="space20">
-            <Link to="/">Home</Link>
-            <Link to="/page1">page 1</Link>
-            <Link to="/page2">page 2</Link>
-          </Stack>
-          <Routes>
-            <Route path="">
-              <IndexPage />
-            </Route>
-            <Route path="page1">
-              <Page1 />
-            </Route>
-            <Route path="/page2">
-              <Page2 />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </React.Suspense>
-    </App>
+    <Box display="flex">
+      <App>
+        <React.Suspense fallback={<Loading />}>
+          <Header />
+          <Box width="100vw" display="flex">
+            <SideNav />
+            <Router>
+              <Box>
+                <Routes>
+                  <Route path="/" element={<IndexPage />}></Route>
+                  <Route path="/Routing" element={<Routing />}></Route>
+                </Routes>
+              </Box>
+            </Router>
+          </Box>
+        </React.Suspense>
+      </App>
+    </Box>
   );
 };
 
@@ -45,7 +44,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Index />
   </React.StrictMode>,
-  document.querySelector('#root')
+  document.querySelector("#root")
 );
 
 /**
