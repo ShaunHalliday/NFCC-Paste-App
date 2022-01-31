@@ -9,7 +9,7 @@ export const Container = styled(Box)`
   display: flex;
   padding: 5em;
   width: 100vw;
-  background-color: #150C39;
+  background-color: #0085AD;
   position: relative;
 `;
 
