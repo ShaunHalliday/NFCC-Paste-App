@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { Box, Text } from "@twilio-paste/core";
-import { UserIcon } from "@twilio-paste/icons/esm/UserIcon";
 
 export const Container = styled(Box)`
   justify-content: space-evenly;
