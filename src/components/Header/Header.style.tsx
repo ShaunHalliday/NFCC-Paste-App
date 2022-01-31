@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
-import { Box } from "@twilio-paste/core";
+import { Box, Text } from "@twilio-paste/core";
+import { UserIcon } from "@twilio-paste/icons/esm/UserIcon";
 
 export const Container = styled(Box)`
   justify-content: space-evenly;
@@ -20,4 +21,24 @@ export const LogoContainer = styled(Box)`
 
 export const Image = styled('img')`
     height: 4em;
+`;
+
+export const HeaderTextContainer = styled(Box)`
+    width: 40vw;
+`;
+
+export const HeaderText1 = styled(Text)`
+    color: white;
+`;
+
+export const HeaderText2 = styled(Text)`
+    color: white;
+    font-size: 2em;
+    padding-top: 0.2em;
+    font-weight: 700;
+`;
+
+export const ProfileSelectContainer = styled(Box)`
+    width: 20vw;
+    align-content: flex-end;
 `;
