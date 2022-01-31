@@ -17,3 +17,7 @@ export const LogoContainer = styled(Box)`
   width: 40vw;
   align-items: flex-start;  
 `;
+
+export const Image = styled('img')`
+    height: 4em;
+`;

@@ -4,13 +4,13 @@ import { Text } from "@twilio-paste/core";
 import { UserIcon } from "@twilio-paste/icons/esm/UserIcon";
 import { Option } from "@twilio-paste/core";
 import Logo from "../../images/logo.png";
-import { Container, LogoContainer } from "../Header/Header.style";
+import { Container, Image, LogoContainer } from "../Header/Header.style";
 
 export const Header: React.FC = () => {
   return (
     <Container>
       <LogoContainer>
-          <img title="NFCC Logo" src={Logo} alt="Logo" height="50em" />
+          <Image title="NFCC Logo" src={Logo} alt="Logo" />
       </LogoContainer>
       <Box width="40vw">
         <Text
