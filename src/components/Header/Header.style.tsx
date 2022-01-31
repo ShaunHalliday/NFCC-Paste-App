@@ -13,3 +13,7 @@ export const Container = styled(Box)`
   position: relative;
 `;
 
+export const LogoContainer = styled(Box)`
+  width: 40vw;
+  align-items: flex-start;  
+`;

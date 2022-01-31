@@ -4,14 +4,14 @@ import { Text } from "@twilio-paste/core";
 import { UserIcon } from "@twilio-paste/icons/esm/UserIcon";
 import { Option } from "@twilio-paste/core";
 import Logo from "../../images/logo.png";
-import { Container } from "../Header/Header.style";
+import { Container, LogoContainer } from "../Header/Header.style";
 
 export const Header: React.FC = () => {
   return (
     <Container>
-      <Box width="40vw" alignContent="flex-start">
+      <LogoContainer>
           <img title="NFCC Logo" src={Logo} alt="Logo" height="50em" />
-      </Box>
+      </LogoContainer>
       <Box width="40vw">
         <Text
           color={["colorTextBrandInverse"]}
