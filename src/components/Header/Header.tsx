@@ -3,61 +3,59 @@ import * as React from "react";
 import { Text } from "@twilio-paste/core";
 import { UserIcon } from "@twilio-paste/icons/esm/UserIcon";
 import { Option } from "@twilio-paste/core";
+import Logo from "../../images/logo.png";
+import { Container } from "../Header/Header.style";
 
 export const Header: React.FC = () => {
   return (
-    <Box
-      justifyContent="space-evenly"
-      alignItems="center"
-      flexDirection="row"
-      height="20vh"
-      display="flex"
-      padding="space120"
-      width="100vw"
-      backgroundColor="colorBackgroundBrandStrong"
-      position="relative"
-    >
-      <Box width="20vw">
+    <Container>
+      <Box width="40vw" alignContent="flex-start">
+          <img title="NFCC Logo" src={Logo} alt="Logo" height="50em" />
+      </Box>
+      <Box width="40vw">
         <Text
           color={["colorTextBrandInverse"]}
-          as="h1"
-          fontSize={["fontSize100"]}
+          as="p"
         >
-          NFCC
-        </Text>
-      </Box>
-      <Box width="80vw">
-        <Text color={["colorTextBrandInverse"]} as="h3">
           Locator Tool
         </Text>
         <Text
           color={["colorTextBrandInverse"]}
-          as="h2"
+          as="p"
           fontSize={["fontSize90"]}
           paddingTop={"space40"}
+          fontWeight="fontWeightBold"
         >
           Agency A
         </Text>
       </Box>
-      <Box width="25vw" alignContent="flex-end">
-      <Select
-        id="profile"
-        insertBefore={
-          <Button variant="link">
-            <UserIcon
-              decorative={false}
-              size="sizeIcon20"
-              title="Get more info"
-            />
-          </Button>
-        }
-      >
-          <Option color="black" value="User">Caz Stephenson</Option>
-          <Option color="black" value="User">Shaun Halliday</Option>
-          <Option color="black" value="User">Sina Taavon</Option>
-          <Option color="black" value="User">Liz Jenkins</Option>
-      </Select>
+      <Box width="20vw" alignContent="flex-end">
+        <Select
+          id="profile"
+          insertBefore={
+            <Button variant="link">
+              <UserIcon
+                decorative={false}
+                size="sizeIcon20"
+                title="Get more info"
+              />
+            </Button>
+          }
+        >
+          <Option color="black" value="User">
+            Caz Stephenson
+          </Option>
+          <Option color="black" value="User">
+            Shaun Halliday
+          </Option>
+          <Option color="black" value="User">
+            Sina Taavon
+          </Option>
+          <Option color="black" value="User">
+            Liz Jenkins
+          </Option>
+        </Select>
       </Box>
-    </Box>
+    </Container>
   );
 };

@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Anchor, Box, Text } from "@twilio-paste/core";
-import { Link } from "react-router-dom";
+import { Anchor, Box } from "@twilio-paste/core";
 
 export const SideNav: React.FC = () => {
   return (
@@ -8,14 +7,14 @@ export const SideNav: React.FC = () => {
       alignItems="center"
       flexDirection="column"
       height="85vh"
-      padding="space40"
+      padding="space120"
       width="15vw"
       backgroundColor="colorBackgroundStrong"
       display="flex"
       position="relative"
     >
       <Box
-        height="40%"
+        height="50%"
         display="flex"
         flexDirection="column"
         justifyContent="space-between"

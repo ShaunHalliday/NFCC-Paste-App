@@ -15,7 +15,6 @@ import Routing from "./pages/Routing";
 // const Page1 = React.lazy(async () => import("./pages/Page1"));
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-// const Page2 = React.lazy(async () => import("./pages/Page2"));
 
 export const Index: React.FC = () => {
   return (
@@ -23,10 +22,10 @@ export const Index: React.FC = () => {
       <App>
         <React.Suspense fallback={<Loading />}>
           <Header />
-          <Box width="100vw" display="flex">
+          <Box width="100vw" display="flex" height="auto">
             <SideNav />
             <Router>
-              <Box>
+              <Box display="flex">
                 <Routes>
                   <Route path="/" element={<IndexPage />}></Route>
                   <Route path="/Routing" element={<Routing />}></Route>

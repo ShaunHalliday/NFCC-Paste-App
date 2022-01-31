@@ -13,7 +13,7 @@ import { NewIcon } from "@twilio-paste/icons/esm/NewIcon";
 
 export const IndexPage: React.FC = () => {
   return (
-    <Box margin="auto" paddingLeft="space140" paddingTop="space200">
+    <Box as="main" position="absolute" left="30%" top="30%">
       <Card>
         <Heading as="h2" variant="heading20">
           Welcome to the NFCC Counsellor Locator Tool!
