@@ -10,10 +10,11 @@ import {
 } from "@twilio-paste/core";
 
 import { NewIcon } from "@twilio-paste/icons/esm/NewIcon";
+import { Container } from "../components/Index/Index.styles";
 
 export const IndexPage: React.FC = () => {
   return (
-    <Box as="main" position="absolute" left="30%" top="30%">
+    <Container as="main" position="absolute" left="30%" top="30%">
       <Card>
         <Heading as="h2" variant="heading20">
           Welcome to the NFCC Counsellor Locator Tool!
@@ -31,6 +32,6 @@ export const IndexPage: React.FC = () => {
           <Button variant="primary">Start Initial Setup</Button>
         </Box>
       </Card>
-    </Box>
+    </Container>
   );
 };
