@@ -22,13 +22,10 @@ export const HeaderSelect = () => {
           Caz Stephenson
         </Option>
         <Option color="black" value="User">
-          Shaun Halliday
+          Update Timezone
         </Option>
         <Option color="black" value="User">
-          Sina Taavon
-        </Option>
-        <Option color="black" value="User">
-          Liz Jenkins
+          Logout
         </Option>
       </Select>
     </ProfileSelectContainer>
