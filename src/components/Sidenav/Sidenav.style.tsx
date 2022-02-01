@@ -12,6 +12,11 @@ export const Container = styled(Box)`
   position: relative;
 `;
 
-export const Link = styled(Anchor)`
-    
+export const LinkContainer = styled(Box)`
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
+
+export const Link = styled(Anchor)``;
