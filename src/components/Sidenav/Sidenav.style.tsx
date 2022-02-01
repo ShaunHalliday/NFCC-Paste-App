@@ -10,6 +10,10 @@ export const Container = styled(Box)`
   background-color: #e6f4f1;
   display: flex;
   position: relative;
+
+  @media (max-width: 768px) {
+      display: none;
+  }
 `;
 
 export const LinkContainer = styled(Box)`
